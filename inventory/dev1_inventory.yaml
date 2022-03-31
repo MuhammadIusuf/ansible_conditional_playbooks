@@ -1,0 +1,5 @@
+---  # to run ungrouped servers
+all:
+  hosts:
+    10.124.0.5:
+    10.124.0.6:
