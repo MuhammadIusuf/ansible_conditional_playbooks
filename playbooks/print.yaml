@@ -6,4 +6,3 @@
   tasks:
     - name: dubug option 1
       debug: var=test
- 

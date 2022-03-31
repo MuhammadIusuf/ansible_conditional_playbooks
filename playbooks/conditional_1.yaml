@@ -1,0 +1,12 @@
+---
+- name: Ping and get info about OS
+  hosts: all
+  tasks:
+    - name: Ping 
+      ping:
+      register: task1_result
+    
+    - name: Print OS information
+      debug:
+        msg: "{{ ansible_distribution }}"
+      when: task1_result is succeeded
