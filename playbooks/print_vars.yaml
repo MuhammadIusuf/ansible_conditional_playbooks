@@ -1,0 +1,7 @@
+---
+- name: Pinging
+  hosts: web2
+  gather_facts: no
+  tasks:
+    - name: Ping web2
+      ping:
