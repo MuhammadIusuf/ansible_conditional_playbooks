@@ -1,0 +1,22 @@
+- hosts: all
+  tasks:
+  - name: Create a User.
+    user:
+      name: bob
+      state: present
+      password: putin
+  - name: Create a User.
+    user:
+      name: tom
+      state: present
+      password: password
+  - name: Create a User.
+    user:
+      name: amy
+      state: present
+      password: password
+  - name: Create a User.
+    user:
+      name: anna
+      state: present
+      password: password               

@@ -1,0 +1,21 @@
+---
+- name: Ping the servers and creates a new file with the lines
+  hosts: all
+  tasks: 
+    - name: Ping
+      ping:
+      register: pinging
+    - name: Create an empty file
+      file:
+        path: /tmp/file1
+        state: touch
+      when: pinging is succeeded
+    - name: Insert lines to a file
+      blockinfile:
+        path: /tmp/file1
+        block: |
+          this is line one
+          this is line two
+
+
+     

@@ -1,0 +1,8 @@
+---
+- name: playbook
+  hosts: all
+  vars:
+    messege: this is a message
+  tasks:
+    - name: dubug option 1
+      debug: var=test

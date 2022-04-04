@@ -1,0 +1,6 @@
+---
+- name: Pinging servers
+  hosts: group1 # "all" if ungrouped
+  tasks:
+    - name: Ping
+      ping:
