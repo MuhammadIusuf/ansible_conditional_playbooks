@@ -2,6 +2,12 @@
 - name: Pinging
   hosts: web2
   gather_facts: no
+  vars_files:
+    - ../vars_files/vars_print_vars.yaml
   tasks:
     - name: Ping web2
       ping:
+    
+    - name: Print Variable
+      debug:
+        msg: '{{ message }}'

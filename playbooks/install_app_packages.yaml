@@ -1,0 +1,15 @@
+---
+- name: App Deployment
+  hosts: '{{ target_host }}'
+  vars_files:
+    - ../vars_files/vars_install_packages.yaml
+  vars:
+    - message: 'This message is from playbook var'
+  gather_facts: '{{ facts }}'
+  tasks:
+    - name: Ping
+      ping:
+
+    - name: Print Message
+      debug:
+        msg: '{{ message }}'
